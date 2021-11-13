@@ -14,7 +14,14 @@
         >
       </div>
     </div>
-    <Cards />
+    <div v-if="availablePosts">
+      <Cards />
+    </div>
+    <div class="d-flex mt-3 justify-content-center bg-danger rounded-3" v-else>
+      <p class="text-white my-4">
+        You don't have any posts. Click new post button to create one
+      </p>
+    </div>
   </div>
 </template>
 
@@ -24,6 +31,11 @@ export default {
   name: "Home",
   components: {
     Cards,
+  },
+  computed: {
+    availablePosts() {
+      return localStorage.getItem("posts-storage");
+    },
   },
 };
 </script>

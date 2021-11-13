@@ -1,25 +1,26 @@
 <template>
-  <router-link
-    to="/detail-post"
-    class="card border-0 mb-4 text-dark text-decoration-none"
-  >
+  <div class="card border-0 mb-4 shadow-sm">
     <img
       src="https://source.unsplash.com/1280x960/?coding,programming"
-      class="card-img-top rounded-3"
+      class="card-img-top"
       alt="thumbnail"
     />
-    <div class="card-body px-0">
-      <p class="card-title fw-bold fs-5">Test 1</p>
-      <p class="card-text">
-        Some quick example text to build on the card title and make up the bulk
-        of the card's content.
-      </p>
+    <div class="card-body px-3">
+      <router-link
+        to="/detail-post"
+        class="card-title text-dark text-decoration-none fw-bold fs-5"
+        >{{ title }}</router-link
+      >
+      <p class="card-text">{ body }</p>
     </div>
-  </router-link>
+  </div>
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Card",
+  props: ["id", "title", "author", "body"],
+};
 </script>
 
 <style></style>

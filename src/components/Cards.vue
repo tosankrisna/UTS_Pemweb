@@ -1,8 +1,13 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-lg-3">
-        <Card />
+      <div class="col-md-4 col-lg-3" v-for="post in posts" :key="post.id">
+        <Card
+          :id="post.id"
+          :title="post.title"
+          :author="post.author"
+          :body="post.body"
+        />
       </div>
     </div>
   </div>
@@ -16,7 +21,12 @@ export default {
     Card,
   },
   data() {
-    return {};
+    return {
+      posts: [],
+    };
+  },
+  created() {
+    this.posts = JSON.parse(localStorage.getItem("posts-storage") || "[]");
   },
 };
 </script>

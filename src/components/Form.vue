@@ -1,12 +1,12 @@
 <template>
-  <form class="px-2" @submit.prevent="addPost">
+  <form class="px-2" @submit.prevent="submit">
     <div class="mb-4 mt-4">
       <label for="title" class="form-label">Title</label>
       <input
         type="text"
         class="form-control"
         id="title"
-        v-model="title"
+        v-model="postData.title"
         required
       />
     </div>
@@ -16,7 +16,7 @@
         type="text"
         class="form-control"
         id="author"
-        v-model="author"
+        v-model="postData.author"
         required
       />
     </div>
@@ -35,24 +35,18 @@ export default {
   name: "Form",
   data() {
     return {
-      title: "",
-      author: "",
-      post: [],
+      postData: {
+        id: Math.random().toString(5).substr(2, 5),
+        title: "",
+        author: "",
+        body: "",
+      },
     };
   },
   methods: {
-    addPost() {
-      this.post.push([
-        {
-          title: this.title,
-          author: this.author,
-          body: body.value,
-        },
-      ]);
-
-      localStorage.setItem("post", JSON.stringify(this.post));
-
-      this.$router.push("/");
+    submit() {
+      this.postData.body = body.value;
+      this.$emit("submitPost", this.postData);
     },
   },
 };
