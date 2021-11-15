@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="row mt-4 mb-5">
-      <div class="col-8">
+      <div class="col col-lg-8">
         <div class="title px-2">
           <h1 class="mb-3 fw-bold">Add New Post</h1>
         </div>
