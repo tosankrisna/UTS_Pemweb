@@ -7,6 +7,7 @@
         class="form-control"
         id="title"
         v-model="postData.title"
+        placeholder="Enter Post Title"
         required
       />
     </div>
@@ -17,6 +18,18 @@
         class="form-control"
         id="author"
         v-model="postData.author"
+        placeholder="Enter Your Name"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label for="thubnail" class="form-label">Thumbnail</label>
+      <input
+        type="text"
+        class="form-control"
+        id="thumbnail"
+        v-model="postData.thumbnail"
+        placeholder="Enter Image Url"
         required
       />
     </div>
@@ -39,6 +52,7 @@ export default {
         id: Math.random().toString(5).substr(2, 5),
         title: "",
         author: "",
+        thumbnail: "",
         body: "",
       },
     };

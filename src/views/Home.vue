@@ -19,7 +19,7 @@
     </div>
     <div class="d-flex mt-3 justify-content-center bg-danger rounded-3" v-else>
       <p class="text-white my-4">
-        You don't have any posts. Click new post button to create one
+        You don't have any posts. Click new post button to create new one
       </p>
     </div>
   </div>

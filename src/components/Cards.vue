@@ -1,11 +1,12 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-md-4 col-lg-3" v-for="post in posts" :key="post.id">
+      <div class="col-md-6 col-lg-3" v-for="post in posts" :key="post.id">
         <Card
           :id="post.id"
           :title="post.title"
           :author="post.author"
+          :thumbnail="post.thumbnail"
           :body="post.body"
         />
       </div>

@@ -30,6 +30,7 @@ export default {
         id: data.id,
         title: data.title,
         author: data.author,
+        thumbnail: data.thumbnail,
         body: data.body,
       });
 
