@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col col-md-8 mt-5 mb-3">
         <div class="title px-2">
-          <h1 class="mb-3 fw-bold">Blog Posts</h1>
+          <h1 class="mb-3 fw-bold">Your Posts</h1>
         </div>
       </div>
       <div
@@ -18,9 +18,13 @@
     <div v-if="availablePosts">
       <Cards />
     </div>
-    <div class="d-flex mt-3 justify-content-center bg-danger rounded-3" v-else>
+    <div
+      class="d-flex mt-3 justify-content-center bg-danger rounded-3 px-3"
+      v-else
+    >
       <p class="text-white my-4">
-        You don't have any posts. Click new post button to create new one
+        Anda belum memiliki postingan, klik tombol new post untuk membuat
+        postingan.
       </p>
     </div>
   </div>
