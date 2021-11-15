@@ -37,4 +37,10 @@ export default {
   background-position: top;
   border-radius: 20px;
 }
+
+@media screen and (max-width: 400px) {
+  .img {
+    padding: 100px;
+  }
+}
 </style>
