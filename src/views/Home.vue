@@ -15,6 +15,7 @@
         >
       </div>
     </div>
+    <!-- menampilkan card postingan jika terdapat data pada local storage -->
     <div v-if="availablePosts">
       <Cards />
     </div>
@@ -40,6 +41,7 @@ export default {
     Cards,
   },
   computed: {
+    // mendapatkan data pada localstorage
     availablePosts() {
       return localStorage.getItem("posts-storage");
     },

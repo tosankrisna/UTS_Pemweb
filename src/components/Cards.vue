@@ -27,6 +27,7 @@ export default {
     };
   },
   created() {
+    // Mendapatkan item yang sudah diset sebelumnya pada localstorage dan menambahkan ke array posts
     this.posts = JSON.parse(localStorage.getItem("posts-storage") || "[]");
   },
 };

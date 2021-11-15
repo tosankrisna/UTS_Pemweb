@@ -18,6 +18,7 @@ export default {
       post: null,
     };
   },
+  // mendapatkan data berdasarkan id yang dikirim lewat url
   created() {
     const localStorageItems = JSON.parse(localStorage.getItem("posts-storage"));
     const postById = localStorageItems.filter(

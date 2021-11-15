@@ -48,6 +48,7 @@ export default {
   name: "Form",
   data() {
     return {
+      // data postingan terdiri dari id, title, author, thumbnail, dan body
       postData: {
         id: Math.random().toString(5).substr(2, 5),
         title: "",
@@ -58,6 +59,7 @@ export default {
     };
   },
   methods: {
+    // fungsi submit untuk melakukan custom event ke parent dengan membawa data post
     submit() {
       this.postData.body = body.value;
       this.$emit("submitPost", this.postData);

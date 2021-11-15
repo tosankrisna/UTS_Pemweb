@@ -5,16 +5,19 @@ import DetailPage from "../views/DetailPage.vue";
 
 const routes = [
   {
+    // route home
     path: "/",
     name: "Home",
     component: Home,
   },
   {
+    // route create new post
     path: "/new-post",
     name: "NewPost",
     component: NewPost,
   },
   {
+    // route detail post
     path: "/detail-post/:id",
     name: "DetailPost",
     component: DetailPage,

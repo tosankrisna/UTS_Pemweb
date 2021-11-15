@@ -14,6 +14,7 @@
 <script>
 export default {
   name: "Card",
+  // menangkap props yang dikirimkan oleh parent
   props: ["id", "title", "author", "thumbnail", "body"],
 };
 </script>
