@@ -1,15 +1,7 @@
 <template>
-  <div class="card border-0 mb-4 shadow-sm">
-    <img
-      :src="thumbnail"
-      class="card-img-top"
-      style="max-width: 100%; height: 180px"
-      alt="thumbnail"
-    />
-    <div
-      class="card-body py-2 px-3"
-      style="min-height: 120px; overflow: hidden"
-    >
+  <div class="card border-0 mb-4">
+    <img :src="thumbnail" class="card-img-top" alt="thumbnail" />
+    <div class="card-body">
       <router-link
         :to="`/detail-post/${id}`"
         class="card-title text-dark text-decoration-none fw-bold"
@@ -26,4 +18,16 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.card-img-top {
+  max-width: 100%;
+  height: 180px;
+  border-radius: 15px;
+}
+
+.card-body {
+  min-height: 100px;
+  overflow: hidden;
+  padding: 5px;
+}
+</style>

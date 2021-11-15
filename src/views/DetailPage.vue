@@ -1,11 +1,11 @@
 <template>
-  <div class="container">
-    <img
-      :src="post.thumbnail"
-      style="width: 100%; max-height: 350px; object-fit: cover"
-    />
-    <h4 class="mt-3">{{ post.title }}</h4>
-    <p>{{ post.author }}</p>
+  <div class="container mt-4 mb-5">
+    <div
+      class="img"
+      :style="{ 'background-image': 'url(' + post.thumbnail + ')' }"
+    ></div>
+    <h4 class="mt-4 fw-bolder fs-2">{{ post.title }}</h4>
+    <p class="fw-bold mt-3 mb-4">Posted by: {{ post.author }}</p>
     <p v-html="post.body"></p>
   </div>
 </template>
@@ -29,4 +29,12 @@ export default {
 };
 </script>
 
-<style></style>
+<style scoped>
+.img {
+  padding: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  border-radius: 20px;
+}
+</style>

@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-light bg-white border-bottom mb-3">
+  <nav class="navbar navbar-light bg-white border-bottom">
     <div class="container">
-      <router-link to="/" class="navbar-brand mb-0 h1 py-3 px-2"
+      <router-link to="/" class="navbar-brand mb-0 h1 py-3 fw-bold"
         >MY BLOG</router-link
       >
     </div>
